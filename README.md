@@ -1,66 +1,140 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Voici un exemple de fichier README pour votre projet Laravel 11 avec Laravel Filament 3 et quelques plugins installés :
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+# Laravel 11 Starter Kit with Filament 3
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Description
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ce dépôt fournit une base de projet Laravel 11 avec **Laravel Filament 3** et quelques plugins utiles déjà installés. L'objectif de ce starter kit est de vous faire gagner du temps en vous offrant un environnement de développement pré-configuré et prêt à l'emploi, pour que vous puissiez vous concentrer rapidement sur le développement de vos fonctionnalités.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Prérequis
 
-## Learning Laravel
+Avant de commencer, assurez-vous que vous avez installé les éléments suivants sur votre machine :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PHP 8.1 ou supérieur
+- Composer
+- Node.js et npm (ou Yarn)
+- MySQL, SQLite, ou un autre serveur de base de données compatible avec Laravel
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 1. Clonez le dépôt
 
-## Laravel Sponsors
+Clonez ce dépôt sur votre machine locale :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+git clone https://github.com/NARIHY/Base-laravel-filament.git
+cd laravel-filament-starter
+```
 
-### Premium Partners
+### 2. Installez les dépendances PHP
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Installez les dépendances du projet avec Composer :
 
-## Contributing
+```bash
+composer install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Configurez l'environnement
 
-## Code of Conduct
+Copiez le fichier `.env.example` pour créer votre propre fichier `.env` :
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+cp .env.example .env
+```
 
-## Security Vulnerabilities
+Ensuite, ouvrez le fichier `.env` et configurez vos variables d'environnement (base de données, clé d'application, etc.) en fonction de votre environnement local.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 4. Générez la clé d'application
 
-## License
+Générez une nouvelle clé d'application Laravel :
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php artisan key:generate
+```
+
+### 5. Migrations de la base de données
+
+Si vous avez configuré votre base de données, exécutez les migrations pour créer les tables nécessaires :
+
+```bash
+php artisan migrate
+```
+
+### 6. Installez les dépendances JavaScript
+
+Si vous avez besoin de compiler les assets front-end, installez les dépendances Node.js et compilez les assets :
+
+```bash
+npm install
+npm run dev
+```
+
+Ou, si vous préférez utiliser Yarn :
+
+```bash
+yarn install
+yarn dev
+```
+
+### 7. Démarrer le serveur
+
+Lancez le serveur de développement Laravel :
+
+```bash
+php artisan serve
+```
+
+Vous pouvez maintenant accéder à l'application via `http://localhost:8000`.
+
+## Fonctionnalités
+
+- **Laravel 11** : Version la plus récente de Laravel, avec toutes les améliorations et optimisations de performance.
+- **Filament 3** : Tableau de bord d'administration moderne et réactif.
+- **Plugins installés** : Des plugins utiles comme [Filament's Spatie Roles & Permissions](https://filamentphp.com/plugins/roles-permissions), [Filament's Forms](https://filamentphp.com/docs/forms), etc.
+- **Authentification et autorisation** : Prêt à l'emploi avec la configuration de base.
+- **Tableau de bord Filament** : L'interface Filament est déjà prête à l'utilisation, vous permettant de gérer les ressources administratives rapidement.
+
+## Plugins installés
+
+1. **Filament Forms** : Gérer facilement les formulaires administratifs.
+2. **Filament Spatie Roles & Permissions** : Gestion des rôles et permissions pour sécuriser votre application.
+3. **Filament Charts** : Ajoutez des graphiques interactifs dans votre tableau de bord.
+4. **Filament Tables** : Créez des tables dynamiques et personnalisables pour vos ressources.
+
+## Développement
+
+Si vous souhaitez ajouter d'autres fonctionnalités ou modifier le comportement de l'application, voici quelques conseils :
+
+### 1. Ajouter une nouvelle ressource Filament
+
+Pour ajouter une ressource Filament (par exemple, pour une entité `Post`), utilisez la commande artisan :
+
+```bash
+php artisan make:filament-resource Post
+```
+
+Cela générera un fichier de ressource dans le dossier `app/Filament/Resources`.
+
+### 2. Ajouter une relation
+
+Filament facilite la gestion des relations entre les modèles Eloquent. Pour cela, vous pouvez simplement utiliser les composants de formulaire et de table pour les relations.
+
+### 3. Configuration des permissions
+
+Si vous utilisez les permissions de Spatie, n'oubliez pas de configurer les rôles et les permissions dans votre base de données et d'attribuer les droits d'accès sur les ressources Filament.
+
+## Contribution
+
+Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonctionnalités ou corriger des bugs, merci de suivre ces étapes :
+
+1. Forkez le dépôt.
+2. Créez une branche (`git checkout -b feature/nom-fonctionnalité`).
+3. Committez vos modifications (`git commit -am 'Ajoute une nouvelle fonctionnalité'`).
+4. Push sur la branche (`git push origin feature/nom-fonctionnalité`).
+5. Ouvrez une Pull Request.
+
+## Licence
+
+Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
